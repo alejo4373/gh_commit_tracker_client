@@ -5,7 +5,9 @@ const API_BASE_URL = "http://localhost:3100"
 class App extends Component {
   constructor(props) {
     super(props)
-    this.commits = []
+    this.state = {
+      commits: []
+    }
   }
 
   componentDidMount() {
@@ -24,12 +26,16 @@ class App extends Component {
   }
 
   render() {
+    const { commits } = this.state;
     return (
       <div className="App">
         {
-          this.commits.map(commit =>
-            <div>
-              {commit.sha}
+          commits.map(commit =>
+            <div className="commit-card">
+              <h4 className="username">{commit.username}</h4>
+              <p className="repo"><i>{commit.repo}</i></p>
+              <p className="message">{commit.message}</p>
+              <p className="pushed-at">{(new Date(commit.pushed_at)).toLocaleString()}</p>
             </div>
           )
         }
