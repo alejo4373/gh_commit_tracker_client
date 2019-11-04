@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css'
-const API_BASE_URL = "http://localhost:3100"
 
 class App extends Component {
   constructor(props) {
@@ -17,7 +16,7 @@ class App extends Component {
 
   async getPushedCommits() {
     try {
-      let { data } = await axios.get(`${API_BASE_URL}/commits`)
+      let { data } = await axios.get('/commits')
       this.setState({
         commits: data.payload
       })
