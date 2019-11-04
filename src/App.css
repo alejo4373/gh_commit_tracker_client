@@ -1,0 +1,25 @@
+html, body {
+  background-color: black;
+  font-size: 12px
+}
+
+.commit-card {
+  color: white;
+  background-color: #ffffff29;
+  border-radius: 3px;
+  padding: 1px 10px;
+  margin-bottom: 12px;
+  box-shadow: 0px 0px 5px 7px #ffffff21;
+}
+
+.username {
+  color: #A6E22E;
+}
+
+.repo {
+  color: #E6DB74;
+}
+
+.pushed-at {
+  font-size: 0.7em;
+}
