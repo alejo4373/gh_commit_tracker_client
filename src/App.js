@@ -11,7 +11,10 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.getPushedCommits();
+    const fiveMins = 1000 * 60 * 5;
+    setInterval(() => {
+      this.getPushedCommits();
+    }, fiveMins)
   }
 
   async getPushedCommits() {
