@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Moment from 'react-moment';
 import axios from 'axios';
 import './App.css'
 
@@ -38,7 +39,9 @@ class App extends Component {
               <h4 className="username">{commit.username}</h4>
               <p className="repo"><i>{commit.repo}</i></p>
               <p className="message">{commit.message}</p>
-              <p className="pushed-at">{(new Date(commit.pushed_at)).toLocaleString()}</p>
+              <p className="pushed-at">
+                <Moment fromNow date={commit.pushed_at} />
+              </p>
             </div>
           )
         }
