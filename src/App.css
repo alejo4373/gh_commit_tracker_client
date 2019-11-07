@@ -20,6 +20,12 @@ html, body {
   color: #E6DB74;
 }
 
+.message {
+  margin-bottom: 3px;
+}
+
 .pushed-at {
-  font-size: 0.7em;
+  font-size: 0.9em;
+  margin-top: 3px;
+  color: #AE81FF
 }
