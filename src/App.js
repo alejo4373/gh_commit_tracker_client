@@ -13,6 +13,9 @@ class App extends Component {
 
   componentDidMount() {
     const fiveMins = 1000 * 60 * 5;
+
+    this.getPushedCommits(); // Initial fetch
+
     setInterval(() => {
       this.getPushedCommits();
     }, fiveMins)
